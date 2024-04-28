@@ -19,7 +19,7 @@
       groups: sudo
       shell: /bin/bash
       generate_ssh_key: yes
-      ssh_key_bits: 2048
+      ssh_key_bits: 4096
       ssh_key_file: .ssh/id_rsa
 
   - name: allow 'sudo' group to have passwordless sudo
