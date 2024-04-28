@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
             v.cpus = 1
         end
         webapp1.vm.hostname = "webapp1"
-        webapp1.vm.network "private_network", ip: "192.168.56.10"
+        webapp1.vm.network "public_network", ip: "192.168.1.11"
 
         webapp1.vm.provision "ansible" do |ansible|
             ansible.playbook = "playbooks/webapp1.yml"
@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
            v.cpus = 1
         end
         db1.vm.hostname = "db1"
-        db1.vm.network "private_network", ip: "192.168.56.11"
+        db1.vm.network "public_network", ip: "192.168.1.12"
         db1.vm.provision "ansible" do |ansible|
           ansible.playbook = "playbooks/db1.yml"
         end

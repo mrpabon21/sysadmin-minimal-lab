@@ -31,7 +31,7 @@
 
   - name: copy id_pub.rsa with owner and permissions
     ansible.builtin.copy:
-      src: authorized_keys
+      src: ~/.ssh/id_rsa.pub
       dest: /home/ubuntu/.ssh/authorized_keys
       owner: ubuntu
       group: ubuntu
