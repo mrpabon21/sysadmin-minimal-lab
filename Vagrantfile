@@ -12,12 +12,12 @@ Vagrant.configure(2) do |config|
             ansible.playbook = "playbooks/webapp1.yml"
         end
     end
-  
+
     config.vm.define "db1" do |db1|
         db1.vm.box = "ubuntu/jammy64"
         db1.vm.provider "virtualbox" do |v|
             v.memory = 1024
-           v.cpus = 1
+            v.cpus = 1
         end
         db1.vm.hostname = "db1"
         db1.vm.network "public_network", ip: "192.168.1.12"
