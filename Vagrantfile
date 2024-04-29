@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
         db1.vm.hostname = "db1"
         db1.vm.network "public_network", ip: "192.168.1.12"
         db1.vm.provision "ansible" do |ansible|
-          ansible.playbook = "playbooks/db1.yml"
+            ansible.playbook = "playbooks/db1.yml"
         end
     end
 
